@@ -1,37 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
+    background-color: #eaf7ff;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    color: #333;
 }
 
 header {
-    background-color: #333;
-    padding: 10px;
+    background-color: #4fa3f7;
+    color: white;
+    padding: 15px 20px;
     text-align: center;
+}
+
+header nav {
+    display: inline-block;
 }
 
 header nav a {
     color: white;
-    margin: 0 10px;
+    margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-form {
-    margin: 20px;
+header nav a:hover {
+    color: #c6e5ff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-input[type="text"], input[type="password"], textarea {
+/* Login Form Styling */
+.login-container {
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+.login-container h1 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.login-container form label {
+    font-weight: bold;
+    display: block;
+    margin: 15px 0 5px;
+    text-align: left;
+}
+
+.login-container form input[type="text"],
+.login-container form input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #333;
+.login-container form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4fa3f7;
     color: white;
     border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container form button:hover {
+    background-color: #2e86d6;
+}
+
+.error {
+    color: #d9534f;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Confirmation Box */
+.confirmation-box {
+    background-color: white;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 350px;
+}
+
+.confirmation-box h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.confirmation-box p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.confirmation-box form {
+    margin-top: 20px;
+}
+
+.confirmation-box button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirmation-box .confirm-button {
+    background-color: #d9534f;
+    color: white;
+}
+
+.confirmation-box .confirm-button:hover {
+    background-color: #c9302c;
+}
+
+.confirmation-box .cancel-button {
+    background-color: #5bc0de;
+    color: white;
+}
+
+.confirmation-box .cancel-button:hover {
+    background-color: #31b0d5;
+}
+
+/* Footer */
+footer {
+    background-color: #4fa3f7;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    header nav a {
+        margin: 0 10px;
+    }
+
+    .login-container {
+        width: 90%;
+    }
+
+    .confirmation-box {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    .login-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .confirmation-box {
+        width: 100%;
+        padding: 15px;
+    }
 }
