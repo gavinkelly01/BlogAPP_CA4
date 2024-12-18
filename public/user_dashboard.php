@@ -16,7 +16,7 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?> 
 
 
-<a href="index.php">Back to home page</a>
+<a href="index.php">Back to Dashboard</a>
 <h2>Your Posts</h2>
 <a href="create_post.php">Create a new post</a>
 
@@ -35,5 +35,3 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <p>You have no posts yet.</p>
 
 <?php endif; ?>
-
-

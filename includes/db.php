@@ -6,6 +6,7 @@ function getDB() {
         $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC); // Set the fetch mode to associative arrays
         return $db;
     } catch (PDOException $e) {
+        // Handle the connection error and exit
         echo "Database connection failed: " . $e->getMessage();
         exit;
     }

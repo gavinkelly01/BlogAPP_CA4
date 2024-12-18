@@ -9,12 +9,12 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $title = $_POST['title'];
-    $content = $_POST['content'];
-    $user_id = $_SESSION['user_id'];
-
+    $title = $_POST['title'];  
+    $content = $_POST['content']; 
+    $user_id = $_SESSION['user_id'];  
     $db = getDB();
-    $db->exec("INSERT INTO posts (title, content, user_id) VALUES ('$title', '$content', '$user_id')");
+    $query = "SELECT * FROM posts WHERE title = '$title' AND content = '$content'";
+    $result = $db->query($query);
 
     header("Location: user_dashboard.php");
     exit;
@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <form method="POST">
     <label>Title:</label><br>
-    <input type="text" name="title"><br>
+    <input type="text" name="title" ><br>
     <label>Content:</label><br>
-    <textarea name="content"></textarea><br>
+    <textarea name="content" ></textarea><br>
     <button type="submit">Create Post</button>
 </form>
