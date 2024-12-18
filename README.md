@@ -1,1 +1,4 @@
-# BlogAPP_CA4
+- **Install XAMPP on https://www.apachefriends.org/download.html**.
+- Download the blogAppPHP files (either securebranch or non secure branch) and place it into htdocs directory within C:\xampp\htdocs.
+- To now run the application, start Apache server on the XAMPP application.
+- Go to a browser and enter this localhost url : **http://localhost/blogAppPHP/index.php**
